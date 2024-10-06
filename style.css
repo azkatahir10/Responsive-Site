@@ -1,0 +1,126 @@
+
+/* General styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Navbar styles */
+.navbar {
+    background-color: #6e7174;
+    color: white;
+    padding: 1rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar h1 {
+    color: #FFD700;
+    font-size: 1.5rem;
+}
+
+.navbar-links {
+    list-style: none;
+    display: flex;
+    justify-content: end;
+    gap: 1rem;
+}
+
+.navbar-links a {
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.navbar-links a:hover {
+    color: #ffd700;
+}
+
+/* Hamburger menu for mobile */
+.hamburger {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* Sidebar styles for mobile */
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #333;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    z-index: 2000;
+}
+
+.sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    background-color: #575757;
+}
+
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 3rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column; /* Stack the content vertically */
+        align-items: center; /* Center the content */
+    }
+
+    .right {
+        order: -1; /* Move the image container to the top */
+        margin: 0; /* Remove margins for mobile */
+    }
+
+    .left {
+        text-align: center; /* Center text */
+        padding: 0 20px; /* Add some padding for aesthetics */
+    }
+
+    .left h2 {
+        font-size: 1.5rem; /* Reduce font size for the title */
+    }
+
+    .left p {
+        font-size: 0.9rem; /* Reduce font size for the paragraph */
+    }
+
+    .left .btn {
+        font-size: 0.9rem; /* Reduce font size for the button */
+    }
+}
